@@ -87,17 +87,16 @@ export const Menu: React.FC<{ selectedCategory?: string }> = ({
         <ul>
           {galeria_meses.map((categoria) => (
             <li key={categoria}>
-              <button
+              <Link
+                to={`/${NavigateToMenu(categoria)}`}
                 className={`btn-menu ${
                   currentCategory === categoria ? "activo" : ""
                 }`}
                 onClick={() => ActivateButton(categoria)}
               >
-                <Link to={`/${NavigateToMenu(categoria)}`}>
-                  {categoria.toUpperCase()}
-                </Link>
+                {categoria.toUpperCase()}
                 <div className="overlay"></div>
-              </button>
+              </Link>
             </li>
           ))}
         </ul>
