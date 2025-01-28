@@ -14,22 +14,22 @@ import { Link } from "react-router-dom";
 import CustomCarousel from "./components/slider/slider";
 
 export const Menu: React.FC<{ selectedCategory?: string }> = ({
-  selectedCategory = "Octubre",
+  selectedCategory = "OCTUBRE",
 }) => {
   const [currentCategory, setCurrentCategory] =
     useState<string>(selectedCategory);
-  const galeria_meses = ["Octubre", "Noviembre", "Diciembre"];
+  const galeria_meses = ["OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
   const ActivateButton = (text: string) => {
     setCurrentCategory(text);
   };
 
   const NavigateToMenu = (text: string): string => {
     switch (text) {
-      case "Octubre":
+      case "OCTUBRE":
         return "galeria/octubre";
-      case "Noviembre":
+      case "NOVIEMBRE":
         return "galeria/noviembre";
-      case "Diciembre":
+      case "DICIEMBRE":
         return "galeria/diciembre";
     }
     return "galeria/octubre";
@@ -41,7 +41,7 @@ export const Menu: React.FC<{ selectedCategory?: string }> = ({
     const fotos_dec = [v1, v2, v3];
 
     switch (categoria) {
-      case "Octubre":
+      case "OCTUBRE":
         return (
           <ul className="criollos-container">
             <CustomCarousel>
@@ -51,7 +51,7 @@ export const Menu: React.FC<{ selectedCategory?: string }> = ({
             </CustomCarousel>
           </ul>
         );
-      case "Noviembre":
+      case "NOVIEMBRE":
         return (
           <ul className="criollos-container">
             <CustomCarousel>
@@ -61,7 +61,7 @@ export const Menu: React.FC<{ selectedCategory?: string }> = ({
             </CustomCarousel>
           </ul>
         );
-      case "Diciembre":
+      case "DICIEMBRE":
         return (
           <ul className="criollos-container">
             <CustomCarousel>
